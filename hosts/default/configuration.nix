@@ -145,6 +145,9 @@
      github-desktop
      obsidian
      signal-desktop
+     rpi-imager
+     discord
+     zoom-us
   ];
 
 
