@@ -9,6 +9,11 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware = {
+      url = "github:nixos/nixos-hardware/master";
+#      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -17,6 +22,7 @@
       modules = [
         ./hosts/default/configuration.nix
         inputs.home-manager.nixosModules.default
+        inputs.nixos-hardware.nixosModules.framework-13-7040-amd
       ];
     };
   };
